@@ -31,6 +31,9 @@ function onFormSubmit(e) {
   if (localStorage.getItem(KEY)) {
     localStorage.removeItem(KEY);
   }
+  if (!email.value || ! message.value) {
+        return alert('Всі поля повинні бути заповнені!');
+    } 
   e.currentTarget.reset();
   formData = {};
 }
